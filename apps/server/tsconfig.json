@@ -1,5 +1,5 @@
 {
-  "extends": "@inkrypt/tooling/tsconfig-base",
+  "extends": "../../packages/tooling/tsconfig-base.jsonc",
   "compilerOptions": {
     "jsxImportSource": "hono/jsx"
   }

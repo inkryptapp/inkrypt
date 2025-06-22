@@ -1,5 +1,5 @@
 {
-  "extends": ["@inkrypt/tooling/tsconfig-base", "./.svelte-kit/tsconfig.json"],
+  "extends": ["../../packages/tooling/tsconfig-base.jsonc", "./.svelte-kit/tsconfig.json"],
   "compilerOptions": {}
 
   // Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias

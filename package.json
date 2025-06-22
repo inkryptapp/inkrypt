@@ -4,11 +4,7 @@
   "description": "Local-first, end-to-end encrypted note-taking app",
   "license": "AGPL-3.0-only",
   "private": true,
-  "packageManager": "bun@1.2.13",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
+  "packageManager": "pnpm@10.12.4",
   "scripts": {
     "dev": "turbo run dev",
     "check": "turbo run check && biome check --write",
