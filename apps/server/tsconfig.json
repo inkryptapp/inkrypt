@@ -1,6 +1,8 @@
 {
   "extends": "../../packages/tooling/tsconfig-base.jsonc",
   "compilerOptions": {
-    "jsxImportSource": "hono/jsx"
+    "lib": ["ESNext", "WebWorker"],
+    "jsxImportSource": "hono/jsx",
+    "types": ["@cloudflare/workers-types", "@types/node"]
   }
 }

@@ -1,0 +1,33 @@
+name = "yjs-durable-objects"
+main = "src/index.ts"
+compatibility_date = "2025-07-07"
+
+# Global vars for local development
+vars = { ALLOWED_ORIGINS = "*", MAX_CONNECTIONS_PER_ROOM = "100", MAX_MESSAGE_SIZE = "1048576" }
+
+# Development configuration
+[env.development]
+vars = { ALLOWED_ORIGINS = "*", MAX_CONNECTIONS_PER_ROOM = "100", MAX_MESSAGE_SIZE = "1048576" }
+
+# Staging configuration
+[env.staging]
+vars = { ALLOWED_ORIGINS = "https://staging.inkrypt", MAX_CONNECTIONS_PER_ROOM = "500", MAX_MESSAGE_SIZE = "1048576", ERROR_WEBHOOK_URL = "https://errors.inkrypt/staging" }
+
+# Production configuration
+[env.production]
+vars = { ALLOWED_ORIGINS = "https://app.inkrypt,https://inkrypt", MAX_CONNECTIONS_PER_ROOM = "1000", MAX_MESSAGE_SIZE = "1048576", ERROR_WEBHOOK_URL = "https://errors.inkrypt/production" }
+
+# Durable Objects bindings (global - available in all environments)
+[[durable_objects.bindings]]
+name = "INKRYPT_SYNC_DO"
+class_name = "YjsDurableObject"
+script_name = "yjs-durable-object"
+
+# Analytics Engine binding (optional, for monitoring)
+# [[analytics_engine_datasets]]
+# binding = "ANALYTICS"
+
+# Migrations for Durable Objects
+[[migrations]]
+tag = "v1"
+new_classes = ["YjsDurableObject"] 
