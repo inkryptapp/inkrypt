@@ -5,7 +5,6 @@
   "license": "AGPL-3.0-only",
   "private": true,
   "exports": {
-    "./tsconfig-base": "./ts-configs/tsconfig-base.json",
-    "./eslint-svelte": "./eslint-configs/eslint-svelte.config.mjs"
+    "./tsconfig-base": "./ts-configs/tsconfig-base.jsonc"
   }
 }

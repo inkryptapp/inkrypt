@@ -1,15 +1,3 @@
 #!/bin/bash
 
-# error flag
-exit_code=0
-
-# root-level
-nano-staged || exit_code=1
-
-# package-level
-turbo run nano-staged || exit_code=1
-
-# make sure to log all errors and warnings from each package before the process exits
-if [ "$exit_code" -ne 0 ]; then
-  exit 1
-fi
+nano-staged

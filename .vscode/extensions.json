@@ -1,7 +1,6 @@
 {
   "recommendations": [
-    "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode",
+    "biomejs.biome",
     "rust-lang.rust-analyzer",
     "svelte.svelte-vscode",
     "tauri-apps.tauri-vscode"

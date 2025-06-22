@@ -19,8 +19,6 @@
     "prepare": "svelte-kit sync || echo ''",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
     "ui": "bun x shadcn-svelte@next"
   },
   "dependencies": {
@@ -31,20 +29,13 @@
     "tw-animate-css": "^1.3.4"
   },
   "devDependencies": {
-    "@eslint/compat": "^1.3.0",
-    "@eslint/js": "^9.29.0",
     "@inkrypt/tooling": "workspace:*",
     "@sveltejs/kit": "^2.22.0",
     "@sveltejs/package": "^2.3.11",
     "@sveltejs/vite-plugin-svelte": "^5.1.0",
     "@tailwindcss/typography": "^0.5.16",
-    "eslint": "^9.29.0",
-    "eslint-config-prettier": "^10.1.5",
-    "eslint-plugin-svelte": "^3.9.3",
-    "globals": "^16.2.0",
     "svelte-check": "^4.2.2",
-    "tailwindcss": "^4.1.10",
-    "typescript-eslint": "^8.34.1"
+    "tailwindcss": "^4.1.10"
   },
   "peerDependencies": {
     "svelte": "^5.34.7"

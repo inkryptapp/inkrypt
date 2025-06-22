@@ -1,3 +1,25 @@
 {
+  "biome.lsp.bin": "node_modules/.bin/biome",
+
+  // Optionally turn off prettier/eslint to avoid conflict
+  "editor.formatOnSave": true,
+  "eslint.enable": false,
+  "prettier.enable": false,
+  "editor.defaultFormatter": "biomejs.biome",
+
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+
+  // Let Svelte Language Server handle .svelte files
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  },
   "svelte.enable-ts-plugin": true
 }
