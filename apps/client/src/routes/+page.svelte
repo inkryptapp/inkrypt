@@ -30,7 +30,7 @@
       console.log("Vault changes:", event.payload);
       if (!selectedVault) return;
 
-      const relevantEvents = event.payload.filter(e => e.vaultId === selectedVault!.id);
+      const relevantEvents = event.payload.filter(e => e.vaultId === selectedVault.id);
       if (relevantEvents.length === 0) return;
 
       await loadEntries();

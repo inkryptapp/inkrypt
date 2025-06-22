@@ -1,9 +1,9 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+
 @source './**/*.{svelte,ts}';
 
 @plugin "@tailwindcss/typography";
-
-@import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
