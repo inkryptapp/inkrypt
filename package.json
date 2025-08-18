@@ -1,0 +1,16 @@
+{
+  "name": "@inkrypt/inkrypt",
+  "version": "0.0.0",
+  "description": "Local-first, end-to-end encrypted note-taking app",
+  "license": "AGPL-3.0-only",
+  "author": {
+    "name": "Peter Bartha",
+    "email": "peterbartha@pm.me",
+    "url": "https://peterbartha.com/"
+  },
+  "private": true,
+  "packageManager": "pnpm@10.14.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
