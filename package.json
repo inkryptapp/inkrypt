@@ -2,15 +2,42 @@
   "name": "@inkrypt/inkrypt",
   "version": "0.0.0",
   "description": "Local-first, end-to-end encrypted note-taking app",
+  "private": true,
   "license": "AGPL-3.0-only",
   "author": {
     "name": "Peter Bartha",
     "email": "peterbartha@pm.me",
     "url": "https://peterbartha.com/"
   },
-  "private": true,
-  "packageManager": "pnpm@10.14.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint --continue",
+    "format": "prettier --write .",
+    "check-types": "turbo run check-types --continue",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.33.0",
+    "eslint": "^9.33.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^16.3.0",
+    "husky": "^9.1.7",
+    "nano-staged": "^0.8.0",
+    "prettier": "3.6.2",
+    "turbo": "^2.5.6",
+    "typescript-eslint": "^8.40.0"
+  },
+  "nano-staged": {
+    "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,svelte}": [
+      "prettier --write"
+    ],
+    "**/*.{html,yaml,yml,json,jsonc,css,md,mdx}": [
+      "prettier --write"
+    ]
+  },
+  "packageManager": "pnpm@10.14.0",
+  "engines": {
+    "node": ">=22"
   }
 }
