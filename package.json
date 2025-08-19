@@ -29,11 +29,8 @@
     "typescript-eslint": "^8.40.0"
   },
   "nano-staged": {
-    "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,svelte}": [
-      "prettier --write"
-    ],
-    "**/*.{html,yaml,yml,json,jsonc,css,md,mdx}": [
-      "prettier --write"
+    "*": [
+      "prettier --write --ignore-unknown"
     ]
   },
   "packageManager": "pnpm@10.14.0",
