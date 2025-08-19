@@ -1,4 +1,3 @@
 #!/bin/bash
 
-pnpm lint
 nano-staged

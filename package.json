@@ -12,34 +12,28 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
-    "lint": "turbo run lint --continue",
-    "format": "prettier --write .",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "format": "biome format --write .",
     "check-types": "turbo run check-types --continue",
     "prepare": "husky"
   },
   "devDependencies": {
-    "@eslint/js": "^9.33.0",
-    "eslint": "^9.33.0",
-    "eslint-config-prettier": "^10.1.8",
-    "globals": "^16.3.0",
+    "@biomejs/biome": "2.2.0",
     "husky": "^9.1.7",
     "nano-staged": "^0.8.0",
-    "prettier": "3.6.2",
-    "turbo": "^2.5.6",
-    "typescript-eslint": "^8.40.0"
-  },
-  "nano-staged": {
-    "*": [
-      "prettier --write --ignore-unknown"
-    ]
+    "turbo": "^2.5.6"
   },
   "packageManager": "pnpm@10.14.0",
   "engines": {
     "node": ">=22"
   },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild"
+  "nano-staged": {
+    "*.{js,jsx,ts,tsx,cjs,mjs,json,jsonc,css,html,svelte}": [
+      "biome check --write --files-ignore-unknown=true --no-errors-on-unmatched"
+    ],
+    "*.rs": [
+      "rustfmt"
     ]
   }
 }
