@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { Button, Input } from '@inkrypt/ui';
   import { invoke } from '@tauri-apps/api/core';
 
   let name = $state('');
@@ -11,12 +12,12 @@
   }
 </script>
 
-<main class="container">
+<main class="container m-auto py-5">
   <h1 class="text-2xl underline">Welcome to Tauri + Svelte</h1>
 
-  <form class="row" onsubmit={greet}>
-    <input placeholder="Enter a name..." bind:value={name} />
-    <button type="submit">Greet</button>
+  <form class="flex gap-2" onsubmit={greet}>
+    <Input class="flex-1" placeholder="Enter a name..." bind:value={name} />
+    <Button type="submit">Greet</Button>
   </form>
   <p>{greetMsg}</p>
 </main>
