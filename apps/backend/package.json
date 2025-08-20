@@ -1,0 +1,19 @@
+{
+  "name": "@inkrypt/backend",
+  "version": "0.0.0",
+  "description": "Privacy-first backend for Inkrypt made with Hono",
+  "license": "AGPL-3.0-only",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy --minify",
+    "cf-typegen": "wrangler types --env-interface CloudflareBindings"
+  },
+  "dependencies": {
+    "hono": "^4.9.2"
+  },
+  "devDependencies": {
+    "wrangler": "^4.4.0"
+  }
+}
