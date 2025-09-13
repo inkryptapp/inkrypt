@@ -1,0 +1,14 @@
+{
+  "name": "@inkrypt/inkrypt",
+  "version": "0.0.0",
+  "description": "Local-first, quantum-safe, end-to-end encrypted workspace for your thoughts",
+  "license": "AGPL-3.0-only",
+  "private": true,
+  "author": {
+    "name": "Peter Bartha",
+    "email": "peterbartha@pm.me",
+    "url": "https://peterbartha.com/"
+  },
+  "scripts": {},
+  "packageManager": "pnpm@10.16.0"
+}
