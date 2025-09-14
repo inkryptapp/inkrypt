@@ -1,1 +1,2 @@
 nano-staged
+pnpm run test

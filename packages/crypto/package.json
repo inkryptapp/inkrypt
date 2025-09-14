@@ -1,0 +1,16 @@
+{
+  "name": "@inkrypt/crypto",
+  "version": "0.0.0",
+  "description": "Quantum-safe encryption library built for the highest security standards.",
+  "private": true,
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {},
+  "dependencies": {
+    "@noble/ciphers": "^2.0.0",
+    "@noble/hashes": "^2.0.0",
+    "@noble/post-quantum": "^0.5.1",
+    "canonicalize": "^2.1.0",
+    "js-base64": "^3.7.8"
+  }
+}
