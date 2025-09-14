@@ -1,0 +1,27 @@
+{
+  // SvelteKit
+  "svelte.enable-ts-plugin": true,
+
+  // Biome as default linter and formatter
+  "[javascript]": { "editor.defaultFormatter": "biomejs.biome" },
+  "[typescript]": { "editor.defaultFormatter": "biomejs.biome" },
+  "[javascriptreact]": { "editor.defaultFormatter": "biomejs.biome" },
+  "[typescriptreact]": { "editor.defaultFormatter": "biomejs.biome" },
+  "[json]": { "editor.defaultFormatter": "biomejs.biome" },
+  "[jsonc]": { "editor.defaultFormatter": "biomejs.biome" },
+  "[css]": { "editor.defaultFormatter": "biomejs.biome" },
+  "[html]": { "editor.defaultFormatter": "biomejs.biome" },
+
+  // format .svelte files with Svelte's VSCode plugin
+  "[svelte]": { "editor.defaultFormatter": "svelte.svelte-vscode" },
+
+  // fix and organize on save
+  "editor.codeActionsOnSave": {
+    "source.fixAll.biome": "explicit",
+    "source.organizeImports.biome": "explicit"
+  },
+
+  // Biome
+  "biome.enabled": true,
+  "biome.requireConfiguration": true
+}

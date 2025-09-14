@@ -9,6 +9,27 @@
     "email": "peterbartha@pm.me",
     "url": "https://peterbartha.com/"
   },
-  "scripts": {},
-  "packageManager": "pnpm@10.16.0"
+  "scripts": {
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "format": "biome format --write .",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.2.4",
+    "husky": "^9.1.7",
+    "nano-staged": "^0.8.0"
+  },
+  "packageManager": "pnpm@10.16.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "nano-staged": {
+    "*.{js,jsx,ts,tsx,cjs,mjs,json,jsonc,css,html,svelte}": [
+      "biome check --write --files-ignore-unknown=true --no-errors-on-unmatched --unsafe"
+    ],
+    "*.rs": [
+      "rustfmt"
+    ]
+  }
 }
